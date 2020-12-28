@@ -1,11 +1,12 @@
 # Need ggplot2
 library(ggplot2)
 library(palmerpenguins)
+library(ggthemes)
 
 penguin_gg <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   geom_point(aes(color = species, shape = species), size = 2) +
   labs(x = "Bill Length (mm)", y = "Bill Depth (mm)",
        title = "Association Between Penguin Bill Measurements") +
   geom_smooth(aes(group = species), method = "lm") +
-  theme_minimal()
+  theme_base()
 penguin_gg
