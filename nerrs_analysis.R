@@ -89,7 +89,8 @@ ne_nerrs_wq <- ne_nerrs_wq %>%
 
 ne_nerrs_wq
 
-
+ne_nerrs_wq_sites <- ne_nerrs_sites %>%
+  select()
 
 
 ################################################################################
