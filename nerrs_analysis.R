@@ -90,6 +90,8 @@ ne_nerrs_wq <- ne_nerrs_wq %>%
 ne_nerrs_wq
 
 
+
+
 ################################################################################
 # Visualize Data: Next step is to visualize the data.  Let's look at the
 # association between total nitrogen, total phosphorus, and chlorophyll *a*.
