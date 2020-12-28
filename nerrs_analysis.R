@@ -90,7 +90,8 @@ ne_nerrs_wq <- ne_nerrs_wq %>%
 ne_nerrs_wq
 
 ne_nerrs_wq_sites <- ne_nerrs_sites %>%
-  select()
+  select(reserve = nerr_site_id, latitude, longitude, reserve_name) %>%
+  filter()
 
 
 ################################################################################
