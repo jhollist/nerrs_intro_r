@@ -95,7 +95,8 @@ ne_nerrs_wq_sites <- ne_nerrs_sites %>%
            reserve ==  "wqb") %>%
   group_by(reserve) %>%
   summarize(lat_mean = mean(latitude, na.rm = TRUE),
-            long_mean = mean(longitude, na.rm = TRUE))
+            long_mean = mean(longitude, na.rm = TRUE)) %>%
+  
 
 
 ################################################################################
