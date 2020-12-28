@@ -89,14 +89,6 @@ ne_nerrs_wq <- ne_nerrs_wq %>%
 
 ne_nerrs_wq
 
-# cleaning up ne_nerrs_wq
-ne_nerrs_wq_sites <- ne_nerrs_sites %>%
-  select(reserve = nerr_site_id, reserve_name, station_name, latitude, longitude) %>%
-  filter(reserve == "grb" | reserve == "nar" | reserve == "wel" | reserve == "wqb") %>%
-  group_by(reserve, reserve_name) %>%
-  summarize(lat_mean = mean(latitude, na.rm = TRUE),
-            long_mean = mean(longitude, na.rm = TRUE)) %>%
-  left_join(ne_nerrs_wq)
 
 
 ################################################################################

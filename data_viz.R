@@ -3,5 +3,4 @@ library(ggplot2)
 library(palmerpenguins)
 
 ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
-  geom_point() +
-  geom_smooth(method = "lm")
+  geom_point()
