@@ -11,5 +11,5 @@ penguin_gg <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)
   theme_minimal()
 penguin_gg
 
-ggsave("penguin_plot.jpg", penguin_gg, dpi = 600, units = "in", width = 8.5, 
-       height = 11)
+ggsave("penguin_plot.jpg", penguin_gg, dpi = 600, units = "in", width = 4, 
+       height = 7)
