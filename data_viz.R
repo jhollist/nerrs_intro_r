@@ -8,7 +8,8 @@ penguin_gg <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)
   labs(x = "Bill Length (mm)", y = "Bill Depth (mm)",
        title = "Association Between Penguin Bill Measurements") +
   geom_smooth(aes(group = species), method = "lm") +
-  theme_minimal()
+  theme_minimal() + 
+  scale_color_manual(values = c("yellow", "green", "black"))
 penguin_gg
 
 
