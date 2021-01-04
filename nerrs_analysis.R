@@ -109,7 +109,7 @@ ne_nerrs_wq_sites
 ne_nerrs_wq_gg <- ne_nerrs_wq %>%
   ggplot(aes(x=date,y=measurement)) +
   geom_point(aes(color=reserve)) +
-  facet_grid(param ~ reserve, scales = "free_y", 
+  facet_grid(param ~ ., scales = "free_y", 
              labeller = labeller(param = c(do_pct = "%DO", ph = "pH", 
                                            sal = "Salinity", 
                                            temp = "Temperature", 
