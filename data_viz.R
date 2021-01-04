@@ -9,7 +9,7 @@ penguin_gg <- ggplot(data = penguins, aes(x = bill_length_mm, y = bill_depth_mm)
        title = "Association Between Penguin Bill Measurements") +
   geom_smooth(aes(group = species), method = "lm") +
   theme_minimal() + 
-  scale_color_manual(values = c("yellow", "green", "black"))
+  scale_color_manual(values = c("#ef8a62", "#f7f7f7", "#67a9cf"))
 penguin_gg
 
 
