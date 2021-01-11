@@ -28,4 +28,8 @@ nla <- left_join(nla_sites, nla_wq, by = "site_id") %>%
          !is.na(chla),
          !is.na(ptl))
 
+# Univariate stats
+summary(nla)
+
+
 
