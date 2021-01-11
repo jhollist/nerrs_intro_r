@@ -63,6 +63,6 @@ summary(nla_anova)
 TukeyHSD(nla_anova)
 
 # Linear modelling
-ptl_chla_cor <- cor(log1p(nla$ptl), log1p(nla$chla))
-
+cor(log1p(nla$ptl), log1p(nla$chla), method = "pearson")
+cor.test(log1p(nla$ptl), log1p(nla$chla), method = "pearson")
 
