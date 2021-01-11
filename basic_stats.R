@@ -47,3 +47,4 @@ plot(log1p(nla$ptl), log1p(nla$ntl))
 
 
 
+
