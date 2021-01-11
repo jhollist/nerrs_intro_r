@@ -55,11 +55,14 @@ t.test(log1p(nla$chla) ~ nla$lake_origin)
 
 # ANOVA
 boxplot(log1p(nla$chla) ~ nla$rt_nla + nla$lake_origin)
-nla_anova <- aov(log1p(chla) ~ rt_nla, data = nla)
+nla_anova <- aov(log1p(chla) ~ rt_nla + lake_origin, data = nla)
 nla_anova
 summary(nla_anova)
 
 # Post hoc
 TukeyHSD(nla_anova)
+
+# Linear modelling
+ptl_chla_cor <- cor(log1p(nla$ptl), log1p(nla$chla))
 
 
