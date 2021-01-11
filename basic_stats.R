@@ -35,6 +35,8 @@ min(nla$chla)
 sd(nla$chla)
 quantile(nla$chla)
 
+# Simple viz
+hist(nla$ntl, bins = 100)
 
 
 
