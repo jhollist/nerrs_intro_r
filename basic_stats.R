@@ -45,6 +45,11 @@ boxplot(log1p(nla$ntl) ~ nla$epa_reg)
 # Formula notation y ~ x
 plot(log1p(nla$ptl), log1p(nla$ntl))
 
+nla_numeric <- nla %>%
+  select(ntl, ptl, chla, turb)
+plot(log1p(nla_numeric))
+
+# t-test
 
 
 
