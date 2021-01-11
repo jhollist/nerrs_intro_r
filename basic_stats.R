@@ -53,4 +53,7 @@ plot(log1p(nla_numeric))
 boxplot(log1p(nla$chla) ~ nla$lake_origin)
 t.test(log1p(nla$chla) ~ nla$lake_origin)
 
+# ANOVA
+boxplo
+
 
