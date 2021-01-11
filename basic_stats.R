@@ -11,3 +11,6 @@ nla_wq <- nla_wq_all %>%
   filter(site_type == "prob_lake",
          visit_no == 1) %>%
   select(site_id, st, epa_reg, wsa_eco9, ptl, ntl, turb, chla, doc)
+
+nla_sites <- read_csv("https://www.epa.gov/sites/production/files/2014-01/nla2007_sampledlakeinformation_20091113.csv")
+
