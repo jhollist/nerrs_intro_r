@@ -42,6 +42,8 @@ hist(log1p(nla$ntl))
 plot(density(log1p(nla$ntl)))
 boxplot(log1p(nla$ntl))
 boxplot(log1p(nla$ntl) ~ nla$epa_reg)
+# Formula notation y ~ x
+plot(log1p(nla$ptl), log1p(nla$ntl))
 
 
 
