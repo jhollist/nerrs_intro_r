@@ -69,7 +69,8 @@ cor.test(log1p(nla$ptl), log1p(nla$chla), method = "pearson")
 ptl_chla_lm <- lm(log1p(chla) ~ log1p(ptl) + log1p(ntl) + log1p(ptl):log1p(ntl), data = nla)
 summary(ptl_chla_lm)
 plot(ptl_chla_lm)
+ptl_chla_lm$residuals
 
-
+install.packages("randomForest")
 
 
