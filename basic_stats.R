@@ -37,7 +37,11 @@ quantile(nla$chla)
 
 # Simple viz
 hist(nla$ntl, breaks = 5)
-
+hist(nla$ntl)
+hist(log1p(nla$ntl))
+plot(density(log1p(nla$ntl)))
+boxplot(log1p(nla$ntl))
+boxplot(log1p(nla$ntl) ~ nla$epa_reg)
 
 
 
