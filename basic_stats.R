@@ -36,7 +36,7 @@ sd(nla$chla)
 quantile(nla$chla)
 
 # Simple viz
-hist(nla$ntl, bins = 100)
+hist(nla$ntl, breaks = 5)
 
 
 
