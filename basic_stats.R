@@ -54,6 +54,7 @@ boxplot(log1p(nla$chla) ~ nla$lake_origin)
 t.test(log1p(nla$chla) ~ nla$lake_origin)
 
 # ANOVA
-boxplo
+boxplot(log1p(nla$chla) ~ nla$rt_nla)
+nla_anova <- aov(log1p(chla) ~ rt_nla, data = nla)
 
 
