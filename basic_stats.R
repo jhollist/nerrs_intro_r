@@ -30,6 +30,12 @@ nla <- left_join(nla_sites, nla_wq, by = "site_id") %>%
 
 # Univariate stats
 summary(nla)
+mean(nla$chla)
+min(nla$chla)
+sd(nla$chla)
+quantile(nla$chla)
+
+
 
 
 
