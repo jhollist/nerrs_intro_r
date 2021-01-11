@@ -73,4 +73,4 @@ ptl_chla_lm$residuals
 
 install.packages("randomForest")
 library(randomForest)
-
+nla_rf <- randomForest(log1p(chla) ~ ., data = nla )
