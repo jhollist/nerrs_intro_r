@@ -58,3 +58,8 @@ boxplot(log1p(nla$chla) ~ nla$rt_nla)
 nla_anova <- aov(log1p(chla) ~ rt_nla, data = nla)
 nla_anova
 summary(nla_anova)
+
+# Post hoc
+TukeyHSD(nla_anova)
+
+
