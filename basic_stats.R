@@ -50,6 +50,7 @@ nla_numeric <- nla %>%
 plot(log1p(nla_numeric))
 
 # t-test
+boxplot(log1p(nla$chla) ~ nla$lake_origin)
 t.test(nla$chla ~ nla$lake_origin)
 
 
