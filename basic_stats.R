@@ -50,6 +50,6 @@ nla_numeric <- nla %>%
 plot(log1p(nla_numeric))
 
 # t-test
-
+t.test(nla$chla ~ nla$lake_origin)
 
 
