@@ -10,6 +10,7 @@ library(lubridate)
 library(stringr)
 library(tidyr)
 library(lubridate)
+library(zoo)
 
 ne_nerrs_wq <- read_csv("ne_nerrs_wq_2020.csv", guess_max = 600000) 
 
