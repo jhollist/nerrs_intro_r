@@ -75,8 +75,9 @@ ne_nerrs_wq <- ne_nerrs_wq %>%
                               NA_real_,
                             TRUE ~ .data$f_turb)) %>%
   filter(complete.cases(.)) %>%
-  select(site, datetimestamp, temp, sal, do_pct, ph, turb) %>%
-  mutate(reserve = str_sub(site, 1, 3),
+  select(site, datetimestamp, temp, sal, do_pct, ph, turb)
+
+mutate(reserve = str_sub(site, 1, 3),
          datetime = ymd_hms(datetimestamp),
          year = year(datetime),
          month = month(datetime),
