@@ -12,3 +12,26 @@ library(tidyr)
 library(lubridate)
 
 ne_nerrs_wq <- read_csv("ne_nerrs_wq_2020.csv", guess_max = 600000)
+
+ne_nerrs_wq <- ne_nerrs_wq %>%
+  select(site, datetimestamp:f_do_pct, ph:f_turb) %>%
+  mutate(f_temp = case_when(.data$f_temp != 0 ~
+                              NA_real_,
+                            TRUE ~ .data$f_temp),
+         f_spcond = case_when(.data$f_spcond != 0 ~
+                                NA_real_,
+                              TRUE ~ .data$f_spcond),
+         f_sal = case_when(.data$f_sal != 0 ~
+                             NA_real_,
+                           TRUE ~ .data$f_sal),
+         f_do_pct = case_when(.data$f_do_pct != 0 ~
+                                NA_real_,
+                              TRUE ~ .data$f_do_pct),
+         f_ph = case_when(.data$f_ph != 0 ~
+                            NA_real_,
+                          TRUE ~ .data$f_ph),
+         f_turb = case_when(.data$f_turb != 0 ~
+                              NA_real_,
+                            TRUE ~ .data$f_turb)) %>%
+  filter(complete.cases(.)) %>%
+  select(site, datetimestamp, temp, sal, do_pct, ph, turb)
