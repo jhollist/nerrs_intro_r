@@ -47,6 +47,11 @@ ne_nerrs_wq_no_time <- ne_nerrs_wq_no_time[1:2000,]
 ne_nerrs_wq_time <- ne_nerrs_wq_no_time %>%
   mutate(date_time = ymd_hms(bad_time))
 
-ne_nerrs_wq_time$roll_mean_temp <- rollmean(ne_nerrs_wq_time$temp,4)
+ne_nerrs_wq_time$roll_mean_temp <- rollmean(ne_nerrs_wq_time$temp,24*4, 
+                                            fill = "extend")
+
+ggplot(ne_nerrs_wq_time, aes(x = date_time, y = temp)) +
+  geom_point() +
+  geom_point(aes(x = date_time, y = roll_mean_temp), col = "red")
 
 
