@@ -63,15 +63,20 @@ ggplot(ne_nerrs_wq_time, aes(x = date_time, y = temp)) +
 # Vector
 library(sp) # old-school
 library(sf) 
+library(mapview)
+library(raster)
+library(stars)
+library(terra)
 
 # Read in a shapefile with sf
 ri_watersheds <- st_read("../nsink/bug_data/wbd/WBD_Subwatershed.shp") %>%
   filter(STATES == "RI")
 
-plot(st_geometry(ne_watersheds))
+plot(st_geometry(ri_watersheds))
 
+mapview(ri_watersheds)
 
-
+nlcd <- raster("../nsink/bug_data/nlcd/01090005_NLCD_2016_Land_Cover_L48_nlcd.tif")
 
 
 
