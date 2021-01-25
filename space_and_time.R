@@ -64,6 +64,10 @@ ggplot(ne_nerrs_wq_time, aes(x = date_time, y = temp)) +
 library(sp) # old-school
 library(sf) 
 
+# Read in a shapefile with sf
+
+
+
 
 
 
