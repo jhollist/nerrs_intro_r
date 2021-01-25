@@ -34,6 +34,9 @@ ne_nerrs_wq <- ne_nerrs_wq %>%
                               NA_real_,
                             TRUE ~ .data$f_turb)) %>%
   filter(complete.cases(.)) %>%
-  select(site, datetimestamp, temp, sal, do_pct, ph, turb) %>%
-  mutate(bad_time = as.character(datetimestamp))
+  select(site, datetimestamp, temp, sal, do_pct, ph, turb) 
+
+ne_nerrs_wq_no_time <- ne_nerrs_wq %>%
+  mutate(bad_time = as.character(datetimestamp)) %>%
+  select(site, bad_time, temp:turb)
 
