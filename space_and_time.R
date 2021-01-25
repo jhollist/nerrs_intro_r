@@ -46,6 +46,6 @@ ne_nerrs_wq_no_time <- ne_nerrs_wq_no_time[1:2000,]
 
 ne_nerrs_wq_time <- ne_nerrs_wq_no_time %>%
   mutate(date_time = ymd_hms(bad_time),
-         roll_mean_temp, rollmean(temp,4,))
+         roll_mean_temp = rollmean(temp,4,na.fill = TRUE))
 
 
