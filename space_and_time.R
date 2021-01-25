@@ -67,6 +67,7 @@ library(sf)
 # Read in a shapefile with sf
 ne_watersheds <- st_read("../nsink/bug_data/wbd/WBD_Subwatershed.shp")
 
+plot(st_geometry(ne_watersheds))
 
 
 
