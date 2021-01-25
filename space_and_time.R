@@ -59,3 +59,12 @@ ggplot(ne_nerrs_wq_time, aes(x = date_time, y = temp)) +
   geom_point(aes(x = date_time, y = roll_mean_temp), col = "red")
 
 # Spatial data in R
+
+# Vector
+library(sp) # old-school
+library(sf) 
+
+
+
+
+
