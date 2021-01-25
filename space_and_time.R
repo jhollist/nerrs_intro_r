@@ -11,7 +11,7 @@ library(stringr)
 library(tidyr)
 library(lubridate)
 
-ne_nerrs_wq <- read_csv("ne_nerrs_wq_2020.csv", guess_max = 600000)
+ne_nerrs_wq <- read_csv("ne_nerrs_wq_2020.csv", guess_max = 600000) 
 
 ne_nerrs_wq <- ne_nerrs_wq %>%
   select(site, datetimestamp:f_do_pct, ph:f_turb) %>%
@@ -34,4 +34,6 @@ ne_nerrs_wq <- ne_nerrs_wq %>%
                               NA_real_,
                             TRUE ~ .data$f_turb)) %>%
   filter(complete.cases(.)) %>%
-  select(site, datetimestamp, temp, sal, do_pct, ph, turb)
+  select(site, datetimestamp, temp, sal, do_pct, ph, turb) %>%
+  mutate(bad_time = as.character(datetimestamp))
+
