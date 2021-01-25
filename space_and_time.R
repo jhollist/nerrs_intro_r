@@ -2,6 +2,8 @@
 ################################################################################
 # Load up packages in R session
 
+
+
 library(ggplot2)
 library(dplyr)
 library(readr)
@@ -11,6 +13,8 @@ library(stringr)
 library(tidyr)
 library(lubridate)
 library(zoo)
+
+# Time Series Examples
 
 ne_nerrs_wq <- read_csv("ne_nerrs_wq_2020.csv", guess_max = 600000) 
 
@@ -54,4 +58,4 @@ ggplot(ne_nerrs_wq_time, aes(x = date_time, y = temp)) +
   geom_point() +
   geom_point(aes(x = date_time, y = roll_mean_temp), col = "red")
 
-
+# Spatial data in R
