@@ -44,5 +44,5 @@ ne_nerrs_wq_no_time <- ne_nerrs_wq %>%
 ne_nerrs_wq_no_time <- ne_nerrs_wq_no_time[1:2000,]
 
 ne_nerrs_wq_time <- ne_nerrs_wq_no_time %>%
-  muate(date_time = bad_time)
+  muate(date_time = ymd_hms(bad_time))
 
